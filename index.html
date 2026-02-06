@@ -17,7 +17,7 @@
     <div class="container">
         
         <div class="card">
-            <div class="img-container"><img src="img/shrek.jpg" alt="Shrek"></div>
+            <div class="img-container"><img src="img/shrek.png" alt="Shrek"></div>
             <h3>Shrek</h3>
             <input type="text" class="guest-input" placeholder="Nome invitato...">
             <div class="actions">
@@ -27,7 +27,7 @@
         </div>
 
         <div class="card">
-            <div class="img-container"><img src="img/fiona.jpg" alt="Fiona"></div>
+            <div class="img-container"><img src="img/fiona.png" alt="Fiona"></div>
             <h3>Fiona</h3>
             <input type="text" class="guest-input" placeholder="Nome invitato...">
             <div class="actions">
@@ -37,7 +37,7 @@
         </div>
 
         <div class="card">
-            <div class="img-container"><img src="img/ciuchino.jpg" alt="Ciuchino"></div>
+            <div class="img-container"><img src="img/ciuchino.png" alt="Ciuchino"></div>
             <h3>Ciuchino</h3>
             <input type="text" class="guest-input" placeholder="Nome invitato...">
             <div class="actions">
@@ -47,7 +47,7 @@
         </div>
 
         <div class="card">
-            <div class="img-container"><img src="img/gatto.jpg" alt="Gatto"></div>
+            <div class="img-container"><img src="img/gatto.png" alt="Gatto"></div>
             <h3>Gatto</h3>
             <input type="text" class="guest-input" placeholder="Nome invitato...">
             <div class="actions">
@@ -57,7 +57,7 @@
         </div>
         
         <div class="card">
-            <div class="img-container"><img src="img/zenzy.jpg" alt="Zenzy"></div>
+            <div class="img-container"><img src="img/zenzy.png" alt="Zenzy"></div>
             <h3>Zenzy</h3>
             <input type="text" class="guest-input" placeholder="Nome invitato...">
             <div class="actions">
@@ -67,7 +67,7 @@
         </div>
 
         <div class="card">
-            <div class="img-container"><img src="img/farquaad.jpg" alt="Lord Farquaad"></div>
+            <div class="img-container"><img src="img/farquaad.png" alt="Lord Farquaad"></div>
             <h3>Lord Farquaad</h3>
             <input type="text" class="guest-input" placeholder="Nome invitato...">
             <div class="actions">
@@ -77,7 +77,7 @@
         </div>
 
         <div class="card">
-            <div class="img-container"><img src="img/pinocchio.jpg" alt="Pinocchio"></div>
+            <div class="img-container"><img src="img/pinocchio.png" alt="Pinocchio"></div>
             <h3>Pinocchio</h3>
             <input type="text" class="guest-input" placeholder="Nome invitato...">
             <div class="actions">
@@ -87,7 +87,7 @@
         </div>
 
         <div class="card">
-            <div class="img-container"><img src="img/drago.jpg" alt="Draghessa"></div>
+            <div class="img-container"><img src="img/drago.png" alt="Draghessa"></div>
             <h3>Draghessa</h3>
             <input type="text" class="guest-input" placeholder="Nome invitato...">
             <div class="actions">
@@ -97,7 +97,7 @@
         </div>
 
         <div class="card">
-            <div class="img-container"><img src="img/lupo.jpg" alt="Lupo Cattivo"></div>
+            <div class="img-container"><img src="img/lupo.png" alt="Lupo Cattivo"></div>
             <h3>Lupo Cattivo</h3>
             <input type="text" class="guest-input" placeholder="Nome invitato...">
             <div class="actions">
@@ -107,7 +107,7 @@
         </div>
 
         <div class="card">
-            <div class="img-container"><img src="img/porcellini.jpg" alt="Tre Porcellini"></div>
+            <div class="img-container"><img src="img/porcellini.png" alt="Tre Porcellini"></div>
             <h3>I 3 Porcellini</h3>
             <input type="text" class="guest-input" placeholder="Nome invitato...">
             <div class="actions">
@@ -153,9 +153,9 @@
             confirmBtn.classList.remove('hidden');
         }
 
-        // Tasto FINALE (Logica modificata come richiesto)
+        // Tasto FINALE
         function vaiAllaProssimaPagina() {
-            // Contiamo quanti ne abbiamo confermati giusto per info, ma non blocchiamo.
+            // Contiamo quanti ne abbiamo confermati
             const confirmedCount = document.querySelectorAll('.guest-input.confirmed').length;
             
             // Messaggio di cortesia (opzionale)
@@ -167,7 +167,6 @@
             }
 
             // Reindirizzamento alla pagina successiva
-            // Assicurati di creare il file pagina_successiva.html
             window.location.href = "pagina_successiva.html"; 
         }
     </script>
