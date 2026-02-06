@@ -164,3 +164,9 @@ h3 {
     transform: translateY(4px);
     box-shadow: none;
 }
+
+/* Aggiunta facoltativa per rendere i bottoni quadrati e carini */
+.btn {
+    min-width: 50px; /* Larghezza fissa per renderli uniformi */
+    font-size: 1.2rem;
+}
