@@ -171,11 +171,9 @@ h3 {
     font-size: 1.2rem;
 }
 
-/* --- STILE PER PAGINA SUCCESSIVA --- */
-
-/* La pergamena centrale */
+/* STILE PER LA PAGINA DI RESOCONTO */
 .scroll-paper {
-    background-color: #FDF5E6; /* Color crema */
+    background-color: #FDF5E6;
     width: 100%;
     max-width: 600px;
     padding: 40px;
@@ -184,22 +182,21 @@ h3 {
     box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
     position: relative;
     margin-top: 20px;
+    /* Righe del foglio */
     background-image: linear-gradient(#e8dcb5 1px, transparent 1px);
-    background-size: 100% 30px; /* Righe del foglio */
-    line-height: 30px; /* Allinea il testo alle righe */
+    background-size: 100% 30px; 
+    line-height: 30px; 
 }
 
-/* Titolo sulla pergamena */
 .scroll-paper h2 {
     text-align: center;
-    color: #8D9E34; /* Verde Shrek */
+    color: #8D9E34;
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-shadow: 1px 1px 0 #5C4033;
     text-decoration: underline;
 }
 
-/* La lista (ul) */
 #lista-finale {
     list-style: none;
     padding: 0;
@@ -207,27 +204,24 @@ h3 {
     color: #3e2b22;
 }
 
-/* Ogni riga della lista */
 #lista-finale li {
     margin-bottom: 15px;
     border-bottom: 1px dashed #5C4033;
     padding-bottom: 5px;
 }
 
-/* Stile per i nomi */
 .character-name {
-    color: #cc0000; /* Rosso regale */
+    color: #cc0000; /* Rosso */
     font-weight: bold;
 }
 
 .guest-name {
-    color: #2E7D32; /* Verde forte */
+    color: #2E7D32; /* Verde */
     font-weight: bold;
     font-size: 1.4rem;
     text-transform: uppercase;
 }
 
-/* Messaggio se la lista è vuota */
 #messaggio-vuoto {
     text-align: center;
     font-style: italic;
