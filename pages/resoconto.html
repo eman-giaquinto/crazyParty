@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resoconto Invitati</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Udite Udite!</h1>
+        <p>Ecco il Decreto Reale degli Invitati</p>
+    </header>
+
+    <div class="container">
+        <div class="scroll-paper">
+            <h2>📜 Lista Ufficiale</h2>
+            <ul id="lista-finale">
+                </ul>
+            
+            <div id="messaggio-vuoto" class="hidden">
+                <p>Nessuno si è presentato alla palude...<br>È tutto molto silenzioso.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-action">
+        <button id="btn-finale" onclick="window.location.href='../index.html'">⬅ Torna alla Palude</button>
+    </div>
+
+    <script>
+        window.onload = function() {
+            // Recuperiamo i dati dalla memoria (localStorage funziona ovunque nel sito)
+            const datiSalvati = localStorage.getItem('listaFestaShrek');
+            const listaElement = document.getElementById('lista-finale');
+            const msgVuoto = document.getElementById('messaggio-vuoto');
+
+            if (datiSalvati) {
+                const listaInvitati = JSON.parse(datiSalvati);
+
+                if (listaInvitati.length > 0) {
+                    listaInvitati.forEach(item => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `
+                            <span class="character-name">${item.personaggio}</span> 
+                            verrà accompagnato da 
+                            <span class="guest-name">${item.ospite}</span>
+                        `;
+                        listaElement.appendChild(li);
+                    });
+                } else {
+                    msgVuoto.classList.remove('hidden');
+                }
+            } else {
+                msgVuoto.classList.remove('hidden');
+            }
+        };
+    </script>
+
+</body>
+</html>
