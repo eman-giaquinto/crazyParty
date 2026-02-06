@@ -122,7 +122,7 @@
         <button id="btn-finale" onclick="vaiAllaProssimaPagina()">Conferma e vai alla festa ➜</button>
     </div>
 
-    <script>
+   <script>
         // Tasto VERDE (Conferma)
         function confermaInvitato(btn) {
             const card = btn.closest('.card');
@@ -155,20 +155,34 @@
 
         // Tasto FINALE
         function vaiAllaProssimaPagina() {
-            // Contiamo quanti ne abbiamo confermati
-            const confirmedCount = document.querySelectorAll('.guest-input.confirmed').length;
-            
-            // Messaggio di cortesia (opzionale)
-            if (confirmedCount === 0) {
+            const cards = document.querySelectorAll('.card');
+            let listaInvitati = [];
+
+            cards.forEach(card => {
+                const input = card.querySelector('.guest-input');
+                const nomePersonaggio = card.querySelector('h3').innerText;
+                
+                if (input.classList.contains('confirmed') && input.value.trim() !== "") {
+                    listaInvitati.push({
+                        personaggio: nomePersonaggio,
+                        ospite: input.value
+                    });
+                }
+            });
+
+            if (listaInvitati.length === 0) {
                 const sicuro = confirm("Non hai assegnato nessun invitato. Vuoi procedere comunque?");
                 if (!sicuro) return;
-            } else {
-                alert("Evviva! " + confirmedCount + " personaggi sono stati assegnati. Andiamo!");
             }
 
-            // Reindirizzamento alla pagina successiva
-            window.location.href = "pagina_successiva.html"; 
+            localStorage.setItem('listaFestaShrek', JSON.stringify(listaInvitati));
+
+            // --- MODIFICA QUI SOTTO: ---
+            // Ora puntiamo alla cartella "pages"
+            window.location.href = "pages/resoconto.html"; 
         }
     </script>
+    
 </body>
 </html>
+
